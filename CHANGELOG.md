@@ -4,7 +4,7 @@ See the [releases page](https://github.com/github/codeql-action/releases) for th
 
 ## [UNRELEASED]
 
-No user facing changes.
+No user facing changes. dsfgsdfgs
 
 ## 4.38.3 - 08 Oct 2026
 
