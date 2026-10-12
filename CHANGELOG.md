@@ -1,4 +1,4 @@
-# CodeQL Action Changelog
+# CodeQL Action CHANGELOG
 
 See the [releases page](https://github.com/github/codeql-action/releases) for the relevant changes to the CodeQL CLI and language packs.
 
