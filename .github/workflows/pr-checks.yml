@@ -144,6 +144,7 @@ jobs:
             exit 1
           fi
           echo "node_version=${NODE_VERSION}" >> $GITHUB_OUTPUT
+          echo 'github.event_name == ${{ github.event_name }}'
 
       - name: Fetch base commit
         id: fetch-base
