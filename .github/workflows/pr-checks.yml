@@ -149,9 +149,7 @@ jobs:
         id: fetch-base
         # Forks and Dependabot PRs don't have permission to write comments, so skip the repo size
         # check in those cases.
-        if: >-
-          github.event_name == 'pull_request' &&
-          github.event.pull_request.user.login != 'dependabot[bot]'
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -221,10 +219,7 @@ jobs:
     needs: other-checks
     # Keep write permissions isolated from the job that checks out and tests PR code. This job only
     # posts the candidate comment body produced by the read-only `pr-checks` job.
-    if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.user.login != 'dependabot[bot]' &&
-      needs.other-checks.result == 'success'
+    if: github.event_name == 'pull_request' && needs.other-checks.result == 'success'
     permissions:
       contents: read
       pull-requests: write
