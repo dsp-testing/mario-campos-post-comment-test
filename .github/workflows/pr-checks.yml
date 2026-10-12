@@ -158,6 +158,8 @@ jobs:
           # added by this PR, ignoring any changes that have landed on the base branch since the
           # PR branched off.
           set -x
+          echo "BASE_SHA: '$BASE_SHA'"
+          echo "HEAD_SHA: '$HEAD_SHA'"
           merge_base=$(gh api "repos/$GITHUB_REPOSITORY/compare/$BASE_SHA...$HEAD_SHA" --jq '.merge_base_commit.sha')
           echo "merge_base=$merge_base" >> "$GITHUB_OUTPUT"
           git fetch --no-tags --depth=1 origin "$merge_base" "$HEAD_SHA"
