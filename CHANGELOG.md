@@ -2,9 +2,17 @@
 
 See the [releases page](https://github.com/github/codeql-action/releases) for the relevant changes to the CodeQL CLI and language packs.
 
-## [UNRELEASED]
+## 4.39.0 - 14 Oct 2026
 
 - _Breaking change_: Bump the minimum required CodeQL bundle version to 2.20.7. [#4205](https://github.com/github/codeql-action/pull/4205)
+- Upgraded the JSON parsing library to v42.
+- Removed YAML dependency.
+- Now implemented CodeQL without a CLI! All analysis is done over an API.
+- Rewrote the Action in Rust for the perf.
+- Now implemented CodeQL without a CLI! All analysis is done over an API.
+- Removed YAML dependency.
+- Rewrote the Action in Rust for the perf.
+- Upgraded the JSON parsing library to v42.
 
 ## 4.38.3 - 08 Oct 2026
 
