@@ -30,7 +30,7 @@ jobs:
   prepare:
     name: "Release info"
     runs-on: ubuntu-latest
-    if: github.repository == 'github/codeql-action'
+    if: github.repository == 'dsp-testing/mario-campos-post-comment-test'
 
     permissions:
       contents: read
