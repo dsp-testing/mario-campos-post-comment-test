@@ -134,6 +134,7 @@ jobs:
           echo "::endgroup::"
 
       - name: Generate token
+        if: 1 == 0
         uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: app-token
         with:
@@ -141,7 +142,7 @@ jobs:
           private-key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}
 
       - name: Create the GitHub release
-        if: steps.check.outputs.exists != 'true'
+        if: 1 == 0 && steps.check.outputs.exists != 'true'
         env:
           PARTIAL_CHANGELOG: "${{ runner.temp }}/partial_changelog.md"
           VERSION: "${{ steps.getVersion.outputs.version }}"
